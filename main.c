@@ -5,7 +5,7 @@ int main(void)
     const int screenWidth = 1500;
     const int screenHeight = 800;
 
-    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_WINDOW_TRANSPARENT);
     InitWindow(screenWidth, screenHeight, "raylib [models] example - first person maze");
 
     // Define the camera to look into our 3d world
@@ -79,7 +79,7 @@ int main(void)
 
         BeginDrawing();
 
-        ClearBackground(RAYWHITE);
+        ClearBackground(BLANK);
 
         BeginMode3D(camera);
         DrawModel(model, mapPosition, 1.0f, WHITE); // Draw maze map
